@@ -28,7 +28,9 @@ year: 2019}
    - Create a variable to store a random number 
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
+function getRandomQuote(param1, param2) {
 
+};
 
 
 
