@@ -57,13 +57,20 @@ year: 2018
    - Create a variable to store a random number 
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
+
 function getRandomQuote(quotes.length) {
  let randomNumber = Math.floor(Math.random() * Math.floor(quotes.length));
  return quotes[randomNumber];
  function printQuote(){
 let printedQuote = getRandomQuote;
 let HTML = '';
-HTML += 
+HTML += '<p>' + quotes[randomNumber].quote + '</p>' + '<p>' + quotes[randomNumber.source] + '<p>';
+if (quotes[randomNumber].citation = true){
+  HTML += quotes[randomNumber].citation;
+};
+if (quotes[randomNumber].year = true){
+  HTML += quotes[randomNumber].year;
+};
  }
 };
 
