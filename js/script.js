@@ -61,17 +61,6 @@ year: 2018
 function getRandomQuote(quotes.length) {
  let randomNumber = Math.floor(Math.random() * Math.floor(quotes.length));
  return quotes[randomNumber];
- function printQuote(){
-let printedQuote = getRandomQuote;
-let HTML = '';
-HTML += '<p>' + quotes[randomNumber].quote + '</p>' + '<p>' + quotes[randomNumber.source] + '<p>';
-if (quotes[randomNumber].citation = true){
-  HTML += quotes[randomNumber].citation;
-};
-if (quotes[randomNumber].year = true){
-  HTML += quotes[randomNumber].year;
-};
- }
 };
 
 /***
@@ -87,7 +76,17 @@ if (quotes[randomNumber].year = true){
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
 
-
+function printQuote(){
+  let printedQuote = getRandomQuote;
+  let HTML = '';
+  HTML += '<p>' + quotes[randomNumber].quote + '</p>' + '<p>' + quotes[randomNumber].source + '<p>';
+  if (quotes[randomNumber].citation = true){
+    HTML += quotes[randomNumber].citation;
+  };
+  if (quotes[randomNumber].year = true){
+    HTML += quotes[randomNumber].year;
+  };
+   }
 
 
 /***
