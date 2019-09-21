@@ -86,16 +86,15 @@ let printedQuote = getRandomQuote(quotes);
 let HTML = '';
 HTML += '<p class="quote">' + printedQuote.quote + '</p>' +
 '<p class="source">' + printedQuote.source;
-if (printedQuote.citation = true) {
+if (printedQuote.citation !== '') {
   HTML += '<span class="citation">' + printedQuote.citation +  '</span>'
 };
-if (printedQuote.year = true) {
+if (printedQuote.year !== '') {
  HTML += '<span class="year">' + printedQuote.year +  '</span>'
 };
   HTML += '</p>';
-  console.log(HTML);
 }
-
+///The printQuote function first stores the quote selected by the getRandomQuote function in a new variable (printedQuote) and then stores concatenated quote properties and HTML tags in a new variable called HTML. There are two conditional statements that test whether citation and year properties exist for the selected quote, and if so, add them to the HTML string. 
 
 /***
   When the "Show another quote" button is clicked, the event listener 
@@ -104,7 +103,7 @@ if (printedQuote.year = true) {
   comment.
 ***/
 
-//document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
