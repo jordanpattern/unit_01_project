@@ -50,8 +50,9 @@ citation: 'Manno, L. (2018, November 14). Laura Jane Grace Cuts Through the Nois
 year: 2018
 }
 ]
-console.log(quotes);
-//This array of objects stores my quotes, along with their respective sources, citations, and years. 
+
+
+//This array of objects stores my quotes, along with their respective sources, citations, and years. I randomly left out some citations or years in order to demonstrate the conditional statement printing those properties only when they are present. 
 
 /***
   Create the `getRandomQuote` function to:
@@ -59,12 +60,15 @@ console.log(quotes);
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
 
-/*** 
-function getRandomQuote(quotes.length) {
+
+function getRandomQuote() {
  let randomNumber = Math.floor(Math.random() * Math.floor(quotes.length));
  return quotes[randomNumber];
 };
-***/
+
+console.log(getRandomQuote(quotes));
+/// The function above first stores a random number between 0 and 6, corresponding with the index value of the seven quotes stored in the array above. It then returns the quote whose index value in the array corresponds with the random number generated previously in the function. 
+
 /***
   Create the `printQuote` function to: 
    - Call the `getRandomQuote` function and assign it to a variable.
@@ -94,10 +98,21 @@ function getRandomQuote(quotes.length) {
 
 ///printQuote second attempt (using instructions)
 
-/***function printQuote() {
-let printedQuote = getRandomQuote;
+function printQuote() {
+let printedQuote = getRandomQuote(quotes);
+let HTML = '';
+HTML += '<p class="quote">' + printedQuote.quote + '</p>' +
+'<p class="source">' + printedQuote.source;
+/***if (printedQuote.citation = true) {
+  HTML += '<span class="citation">' + printedQuote.citation +  '</span>'
+};
+if (printedQuote.year = true) {
+ HTML += '<span class="year">' + printedQuote.year +  '</span>'
+};***/
+  HTML += '</p>';
+  console.log(HTML);
+}
 
-}***/
 
 /***
   When the "Show another quote" button is clicked, the event listener 
