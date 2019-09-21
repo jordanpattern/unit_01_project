@@ -50,6 +50,7 @@ citation: 'Manno, L. (2018, November 14). Laura Jane Grace Cuts Through the Nois
 year: 2018
 }
 ]
+console.log(quotes);
 //This array of objects stores my quotes, along with their respective sources, citations, and years. 
 
 /***
@@ -58,11 +59,12 @@ year: 2018
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
 
+/*** 
 function getRandomQuote(quotes.length) {
  let randomNumber = Math.floor(Math.random() * Math.floor(quotes.length));
  return quotes[randomNumber];
 };
-
+***/
 /***
   Create the `printQuote` function to: 
    - Call the `getRandomQuote` function and assign it to a variable.
@@ -76,7 +78,8 @@ function getRandomQuote(quotes.length) {
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
 
-function printQuote(){
+/*** printQuote first attempt (using instructions above)
+  function printQuote(){
   let printedQuote = getRandomQuote;
   let HTML = '';
   HTML += '<p>' + quotes[randomNumber].quote + '</p>' + '<p>' + quotes[randomNumber].source + '<p>';
@@ -87,7 +90,14 @@ function printQuote(){
     HTML += quotes[randomNumber].year;
   };
    }
+***/
 
+///printQuote second attempt (using instructions)
+
+/***function printQuote() {
+let printedQuote = getRandomQuote;
+
+}***/
 
 /***
   When the "Show another quote" button is clicked, the event listener 
