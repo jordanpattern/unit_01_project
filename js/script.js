@@ -51,15 +51,7 @@ year: 2018
 }
 ]
 
-
 //This array of objects stores my quotes, along with their respective sources, citations, and years. I randomly left out some citations or years in order to demonstrate the conditional statement printing those properties only when they are present. 
-
-/***
-  Create the `getRandomQuote` function to:
-   - Create a variable to store a random number 
-   - Cse the random number to `return` a random quote object from the `quotes` array.
-***/
-
 
 function getRandomQuote() {
  let randomNumber = Math.floor(Math.random() * Math.floor(quotes.length));
@@ -67,19 +59,6 @@ function getRandomQuote() {
 };
 
 /// The function above first stores a random number between 0 and 6, corresponding with the index value of the seven quotes stored in the array above. It then returns the quote whose index value in the array corresponds with the random number generated previously in the function. 
-
-/***
-  Create the `printQuote` function to: 
-   - Call the `getRandomQuote` function and assign it to a variable.
-   - Create a variable for the HTML string and set it equal to an empty string.
-   - Use the HTML template in the instructions or the markup in the index.html file, AND 
-     the random quote vairable to build your HTML string.
-   - Add the quote and source section to the HTML string.
-   - Use an if statement to check for the citation property before adding it to the HTML string.
-   - Use an if statement to check for the year property before adding it to the HTML string.
-   - Don't forget to close that final `p` tag.
-   - Set the `innerHTML` of the `quote-box` div to the HTML string. 
-***/
 
 function printQuote() {
 let printedQuote = getRandomQuote(quotes);
@@ -97,14 +76,7 @@ if (printedQuote.year !== '') {
 }
 ///The printQuote function first stores the quote selected by the getRandomQuote function in a new variable (printedQuote) and then stores concatenated quote properties and HTML tags in a new variable called HTML. There are two conditional statements that test whether citation and year properties exist for the selected quote, and if so, add them to the HTML string. 
 
-/***
-  When the "Show another quote" button is clicked, the event listener 
-  below will be triggered, and it will call, or "invoke", the `printQuote` 
-  function. So do not make any changes to the line of code below this 
-  comment.
-***/
-///document.getElementById('quote-box').innerHTML = printQuote;
+
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
