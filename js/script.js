@@ -93,6 +93,7 @@ if (printedQuote.year !== '') {
  HTML += '<span class="year">' + printedQuote.year +  '</span>'
 };
   HTML += '</p>';
+  document.getElementById('quote-box').innerHTML = HTML;
 }
 ///The printQuote function first stores the quote selected by the getRandomQuote function in a new variable (printedQuote) and then stores concatenated quote properties and HTML tags in a new variable called HTML. There are two conditional statements that test whether citation and year properties exist for the selected quote, and if so, add them to the HTML string. 
 
@@ -102,7 +103,7 @@ if (printedQuote.year !== '') {
   function. So do not make any changes to the line of code below this 
   comment.
 ***/
-
+///document.getElementById('quote-box').innerHTML = printQuote;
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 
