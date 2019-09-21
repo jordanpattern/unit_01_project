@@ -66,7 +66,6 @@ function getRandomQuote() {
  return quotes[randomNumber];
 };
 
-console.log(getRandomQuote(quotes));
 /// The function above first stores a random number between 0 and 6, corresponding with the index value of the seven quotes stored in the array above. It then returns the quote whose index value in the array corresponds with the random number generated previously in the function. 
 
 /***
@@ -82,33 +81,17 @@ console.log(getRandomQuote(quotes));
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
 
-/*** printQuote first attempt (using instructions above)
-  function printQuote(){
-  let printedQuote = getRandomQuote;
-  let HTML = '';
-  HTML += '<p>' + quotes[randomNumber].quote + '</p>' + '<p>' + quotes[randomNumber].source + '<p>';
-  if (quotes[randomNumber].citation = true){
-    HTML += quotes[randomNumber].citation;
-  };
-  if (quotes[randomNumber].year = true){
-    HTML += quotes[randomNumber].year;
-  };
-   }
-***/
-
-///printQuote second attempt (using instructions)
-
 function printQuote() {
 let printedQuote = getRandomQuote(quotes);
 let HTML = '';
 HTML += '<p class="quote">' + printedQuote.quote + '</p>' +
 '<p class="source">' + printedQuote.source;
-/***if (printedQuote.citation = true) {
+if (printedQuote.citation = true) {
   HTML += '<span class="citation">' + printedQuote.citation +  '</span>'
 };
 if (printedQuote.year = true) {
  HTML += '<span class="year">' + printedQuote.year +  '</span>'
-};***/
+};
   HTML += '</p>';
   console.log(HTML);
 }
