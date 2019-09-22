@@ -55,13 +55,6 @@ function getRandomQuote() {
 
 /// The function above first stores a random number between 0 and 6, corresponding with the index value of the seven quotes stored in the array above. It then returns the quote whose index value in the array corresponds with the random number generated previously in the function. 
 
-function randomColor() {
-  let x = Math.floor(Math.random() * 256);
-  let y = Math.floor(Math.random() * 256);
-  let z = Math.floor(Math.random() * 256);
-  let rbgColor = 'rgb(' + x + ',' + y + ',' + z + ')';
-  };
-
 function printQuote() {
   let printedQuote = getRandomQuote(quotes);
 let HTML = '';
@@ -93,10 +86,16 @@ if (printedQuote.category !== undefined) {
 }
 ///The printQuote function first stores the quote selected by the getRandomQuote function in a new variable (printedQuote) and then stores concatenated quote properties and HTML tags in a new variable called HTML. There are two conditional statements that test whether citation and year properties exist for the selected quote, and if so, add them to the HTML string. Finally, it inserts the selected quote into the DOM, so the selected quote is displayed and formatted according to the attache HTML and CSS files. 
 
-randomColor(); { 
+function randomColor() {
+  let x = Math.floor(Math.random() * 256);
+  let y = Math.floor(Math.random() * 256);
+  let z = Math.floor(Math.random() * 256);
+  let rbgColor = 'rgb(' + x + ',' + y + ',' + z + ')';
+  return(rbgColor);
+  };
 
-  document.getElementById('quote-box').innerHTML = html;
-  
+function changeColor(randomColor) { 
+  document.body.style.background = randomColor; 
 };
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
