@@ -62,24 +62,16 @@ HTML += '<p class="quote">' + printedQuote.quote + '</p>' +
 '<p class="source">' + printedQuote.source + ' ';
 if (printedQuote.citation !== undefined) {
   HTML += '<span class="citation">' + printedQuote.citation + '</span>'
-} else {
-  HTML = HTML;
-};
+} 
 if (printedQuote.year !== undefined) {
  HTML += '<span class="year">' + printedQuote.year +  ', </span>'
-} else {
-  HTML + HTML;
-};
+} 
 if (printedQuote.location !== undefined) {
   HTML += '<span class="location">' + printedQuote.location + ', <span>'
-} else {
-  HTML + HTML;
-};
+} 
 if (printedQuote.category !== undefined) {
   HTML += '<span class="category">' + printedQuote.category + ', <span>'
-} else {
-  HTML + HTML;
-};
+} 
   HTML += '</p>';
   document.getElementById('quote-box').innerHTML = HTML;
   
