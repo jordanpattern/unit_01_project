@@ -91,16 +91,18 @@ function randomColor() {
   let y = Math.floor(Math.random() * 256);
   let z = Math.floor(Math.random() * 256);
   let rbgColor = 'rgb(' + x + ',' + y + ',' + z + ')';
-  return(rbgColor);
+  document.body.style.background = rbgColor;
   };
 
-function changeColor(randomColor) { 
-  document.body.style.background = randomColor; 
-};
+  ///The randomColor function generates a random color by generating three random numbers and adding them together. It then inserts the random color into the CSS. 
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+document.getElementById('loadQuote').addEventListener("click", randomColor, false);
 
-///This event listener was provided (thanks!)
+///This event listener was provided (thanks!). I added the second event listener to change the background color when the button is clicked by calling the randomColor function.
 
- 
+setInterval(function () 
+{document.getElementById('loadQuote').click();}, 20000);
+
+///The setInterval function automatically "clicks" the load new quote button every 20 seconds, triggering a new quote and background color to load. 
 
